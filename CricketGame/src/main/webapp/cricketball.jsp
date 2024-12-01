@@ -232,7 +232,9 @@
 		if(role.equals("Bowl First")){
 			session.setAttribute("targetScore", player.getTotalScore());
 	%>
-		<button type="button"><a href="cricketplay.jsp">BAT</a></button>
+		<form action="cricketplay.jsp" method="post">
+		<button type="submit">Bat</button>
+	</form>
 	<% 		
 		}else{
 			if(targetScore == player.getTotalScore()){
@@ -254,7 +256,9 @@
 		if(role.equals("Bowl First")){
 			session.setAttribute("targetScore", player.getTotalScore());
 	%>
-    <button type="button"><a href="cricketplay.jsp">BAT</a></button>
+   <form action="cricketplay.jsp" method="post">
+		<button type="submit">Bat</button>
+	</form>
 	<% 		
 		}else{
 			if(targetScore == player.getTotalScore()){
@@ -313,9 +317,13 @@
       </div>
 
       <!-- Target Score -->
+      <% int scoreNeeded = ((targetScore+1)-(player.getTotalScore()));%>
       <% if(targetScore >= 0){ %>
       <div class="target-score">
         Target Score: <span id="targetScore"><%= targetScore+1%></span>
+      </div>
+      <div class="target-score">
+        Need: <span id="targetScore"><%= scoreNeeded%></span>
       </div>
       <%} %>
     </footer>

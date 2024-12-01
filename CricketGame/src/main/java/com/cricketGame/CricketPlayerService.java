@@ -7,7 +7,7 @@ public class CricketPlayerService {
 	
 	public void batting(int scoreMade,CricketPlayer player) {
 		int randomNumber = random.nextInt(7);
-		System.out.println("Random Number Generated while Batting by User: " + randomNumber + " Usernum : " + scoreMade);
+		System.out.println("Random Number Generated while Batting by System: " + randomNumber + " Usernum : " + scoreMade);
 		if(scoreMade != randomNumber) {
 			player.setScoreRecord(scoreMade);
 			player.setTotalScore(scoreMade+player.getTotalScore());
@@ -20,7 +20,7 @@ public class CricketPlayerService {
 	
 	public void balling(int guessNum,CricketPlayer cpuPlayer) {
 		int randomNumber = random.nextInt(7);
-		System.out.println("Random Number Generated while Balling by User : " + randomNumber + " Usernum : " + guessNum);
+		System.out.println("Random Number Generated while Balling by System : " + randomNumber + " Usernum : " + guessNum);
 		if(guessNum == randomNumber) {
 			cpuPlayer.setTotalWickets();
 			cpuPlayer.setScoreRecord(-1);

@@ -11,6 +11,7 @@
         margin: 0;
         padding: 0;
         display: flex;
+        flex-direction:column;
         align-items: center;
         justify-content: center;
         height: 100vh;
@@ -21,6 +22,12 @@
       .container {
         display: flex;
         gap: 40px; /* Space between the two boxes */
+      }
+
+	  h1 {
+        font-size: 2.5rem;
+        color: #007844; /* Dark green */
+        margin-bottom: 10px;
       }
 
       .box {
@@ -57,6 +64,7 @@
     </style>
   </head>
   <body>
+  	<h1>You've Won the Toss!!</h1>
     <div class="container">
       <form action="Register" method="post" class="box">
         <input type="hidden" name="choose" value="Bat" />
