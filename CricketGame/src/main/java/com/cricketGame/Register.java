@@ -36,7 +36,7 @@ public class Register extends HttpServlet {
 			session.setAttribute("targetScore", -1);
 			session.setAttribute("isMatchTied", "no");
 			session.setAttribute("tietargetScore", 0);
-			response.sendRedirect("toss.jsp");
+			response.sendRedirect("instructions.jsp");
 		} else if (action.equals("toss")) {
 			CricketPlayer player = (CricketPlayer) session.getAttribute("player");
 			String tied = (String) session.getAttribute("isMatchTied");

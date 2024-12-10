@@ -204,7 +204,7 @@
               id="user-input"
               name="guessNum"
               placeholder="Enter Score"
-              min="1" max="6" autocomplete="off"
+              min="0" max="6" autocomplete="off"
               required
             />
             <input type="hidden" name="action" value="ball">
